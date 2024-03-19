@@ -5,12 +5,14 @@ import java.time.LocalDateTime;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
  * Clase de transferencia de datos para el microservicio de cuentas
  */
 @Data
+@AllArgsConstructor
 @JsonInclude(Include.NON_NULL)
 public class Account {
 	private String id;
@@ -22,7 +24,7 @@ public class Account {
 	private Integer transaction;
 	private Integer operationDay;
 	private LocalDateTime dateAccount;
-	private String NumberAccount;
+	private String numberAccount;
 	private String typeCustomer;
 	private Double startAmount;
 }
